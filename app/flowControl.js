@@ -11,5 +11,12 @@ exports.flowControlAnswers = {
     // otherwise the function should return the number, or false if no number
     // was provided or the value provided is not a number
 
+    const divisbleBy3 = num % 3 === 0;
+    const divisbleBy5 = num % 5 === 0;
+
+    if(divisbleBy3 && divisbleBy5) return 'fizzbuzz';
+    else if(divisbleBy3) return 'fizz';
+    else if(divisbleBy5) return 'buzz';
+    else return Number(num) ? num : false;
   }
 };
